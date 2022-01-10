@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../js/node_modules/sal.js/dist/sal.css">
+    <link rel="shortcut icon" href="../img/outline_code_white_24dp.png">
+    <script src="https://kit.fontawesome.com/e7365bc698.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <title>About Me</title>
+    <script>
+        $(document).ready(function(){
+            $('#icon').click(function(){
+                $('ul').toggleClass('show')
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>        
+        <div class="nav-container">
+            <nav>
+                
+                <label class="logo">PersonalProb</label>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../html/about.html">About</a></li>
+                    <li><a href="../html/blog.html">Blog</a></li>
+                    <li><a href="../html/contact.html">Contact</a></li>
+                </ul>
+                <label id="icon">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </nav>
+        </div>
+    </header>  
+    
+    <div class="overall">
+        <div class="container">
+            <p class="contact">Contact Me</p>
+            
+        </div>
+         <div class="contact-container">
+           
+            <form action="https://formsubmit.co/tranhoanglinh2005@gmail.com" method="POST">
+                <label for="name" class="name">Name</label>
+                    <input type="text" class="firstName" placeholder="First" name="name">
+                    <input type="text" class="lastName" placeholder="Last" name="name">
+                <label for="email" class="gmail ">Email</label>
+                    <input type="text" class="mail" name="email" placeholder="Your Mail" required>
+                    <input type="hidden" name="_next" value="ty.html" >
+                <label for="message" class="gmail">Comment and Message</label>
+                    <textarea name="comment"  class="note" cols="50" rows="20" placeholder="Your Messsage..."></textarea>
+                <label for=""></label>
+    
+                
+                <button type="submit" class="btn">Send</button>
+           </form>
+           
+        </div>
+    </div>
+
+</body>
+</html>

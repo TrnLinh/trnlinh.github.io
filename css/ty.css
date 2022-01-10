@@ -1,0 +1,282 @@
+:root {
+    --background: white;
+    --bg-color: white;
+    --typewriterSpeed: 3s;
+    --typewriterCharacters: 10;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(255, 255, 255);
+}
+header{
+    background-color: white;
+    z-index: 999;
+    
+    width: 100%;
+    top: 0;
+}
+.nav-container{
+    margin: 0 auto;
+    width: 80%;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: white;
+}
+label.logo{
+    font-size: 35px;
+    
+    line-height: 80px;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+    margin-right: 40px;
+    
+}
+nav li{
+    display: inline-block;
+    margin: 0 25px;
+    line-height: 80px;
+    position: relative;
+    background-color: white;
+}
+nav a{
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #000;
+  
+    position: absolute;
+    top: 0;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    width: 100%;
+  }
+  nav #icon{
+      color: black;
+      font-size: 30px;
+      line-height: 80px;
+      float: left;
+      
+      cursor: pointer;
+      display: none;
+  }
+
+  
+.container-introduce{
+    margin: 0 auto;
+    width: 80%;
+    place-content: center;
+    text-align: center;
+    display: grid;
+  }
+  
+  .introduce {
+      font-size: 5rem;
+      position: relative;
+      position: relative;
+      width: max-content;
+      margin-top: 30vh;
+      margin-bottom: 20px;
+  }
+  
+  .introduce::before,
+  .introduce::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .introduce::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards;
+  }
+  
+  .introduce::after {
+    width: 0.125em;
+    background: black;
+    animation: typewriter var(--typewriterSpeed)
+        steps(var(--typewriterCharacters)) 1s forwards,
+      blink 750ms steps(var(--typewriterCharacters)) infinite;
+  }
+  
+  .subtitle {
+    color: hsl(0 0% 0% / 0.7);
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 2s) forwards;
+  }
+  
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .Home{
+    margin-top: 10px;
+    padding: 15px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    border: 2px solid black;
+    text-decoration: none;
+    place-content: center;
+    text-align: center;
+    
+    
+  }
+  .Home:hover{
+    background-color: transparent;
+    color: black;
+  }
+
+
+
+
+
+
+
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 1048px) {
+    label.logo{
+        font-size: 32px;
+        padding-left:60px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 17px;
+    }
+    
+}
+@media (max-width: 909px) {
+    header{
+        position: fixed;
+    }
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        
+        transition: all 400ms ease-in-out;
+    }
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 20px;
+        
+    }
+    nav a:active,
+    nav a:hover{
+        color: rgba(0, 0, 0, 0.363);
+    }
+    nav a:hover::before{
+        display: none;
+    }
+
+
+    nav ul.show{
+        left: 0;
+    }
+    label.logo{
+      font-size: 24px;
+      padding-left: 30px;
+      padding-left: 70px;
+    }
+    .introduce{
+        margin-top: 40vh    ;
+    }
+    
+    
+    
+
+}
+
+@media screen and (max-width: 850px) {
+  
+  
+  
+}
+
+@media screen and (max-width: 770px) {
+    
+
+}
+
+@media screen and (max-width: 600px) {
+    .introduce{
+        font-size: 60px;
+      }
+      
+      .Home{
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+}
+@media screen and (max-width: 400px) /* for iphone 6,7,8 lmao */{
+    .introduce{
+        font-size: 50px;
+    }
+   
+}

@@ -1,0 +1,417 @@
+:root {
+    --background: white;
+    --bg-color: white;
+    --black: black;
+    --grey: rgba(0, 0, 0, 0.5)
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(255, 255, 255);
+}
+header{
+    background-color: white;
+    z-index: 999;
+    position:fixed;
+    width: 100%;
+    top: 0;
+}
+.nav-container{
+    margin: 0 auto;
+    width: 80%;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: white;
+}
+label.logo{
+    font-size: 35px;
+    
+    line-height: 80px;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+    margin-right: 40px;
+    
+}
+nav li{
+    display: inline-block;
+    margin: 0 25px;
+    line-height: 80px;
+    position: relative;
+    background-color: white;
+}
+nav a{
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #000;
+  
+    position: absolute;
+    top: 0;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    width: 100%;
+  }
+  nav #icon{
+      color: black;
+      font-size: 30px;
+      line-height: 80px;
+      float: left;
+      
+      cursor: pointer;
+      display: none;
+  }
+  .main-container{
+    margin: 0 auto;
+    width: 80%;
+  }
+  section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* first section */
+  .about-container{
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-column-gap: 2%;
+  }
+  .photo{
+    border: 2px solid var(--black);
+    border-radius: 20px;
+    
+  }
+  .photo-container{
+    margin: 0 auto;
+    width: 80%;
+  }
+  .myface{
+    width: 100%;
+    margin-top: 50px;
+  }
+  .icon{
+    font-size: 30px;
+    color: var(--black);
+  }
+  .icon:hover{
+    color: var(--grey);
+  }
+  
+  .quote{
+    font-size: 20px;
+  }
+  .quote::before{
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--grey);
+    margin: 10px 0;
+  }
+  .author{
+    text-align: right;
+    margin-bottom: 50px;
+  }
+  .profile-container{
+    margin: 0 auto;
+    width: 90%;
+  }
+  .profile{
+    border: 2px solid var(--black);
+    border-radius: 20px;
+  }
+  .profile-title{
+    margin-top: 50px;
+    font-size: 50px;
+  }
+  .profile-info{
+    font-size: 34px;
+    margin-top: 15px;
+  }
+  .profile span {
+    font-size: 14px;
+  }
+  .profile ul li {
+    font-size: 24px;
+    list-style: disc;
+    list-style-position: inside;
+  }
+  
+  
+  
+/*second section top */
+.top{
+  display: grid;
+  grid-template-columns: auto 30%;
+  grid-column-gap: 2%;
+  width: 100%;
+}
+#map{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.picture img{
+ width: 100%;
+ height: auto;
+ border-radius: 20px;
+ display: block;
+}
+.overlay{
+  justify-content: center;
+  display: flex;
+}
+.overlay-content{
+  color: var(--grey);
+  position: absolute;
+}
+
+/* second section bot */
+.sec-sec{
+  flex-direction: column;
+  padding-top: 2rem;
+}
+.bot{
+  border: 2px solid var(--black);
+  border-radius: 20px;
+  display: flexbox;
+  width: 100%;
+  margin-top: 40px;
+}
+.bot-container{
+  margin: 0 auto;
+  width: 90%;
+}
+.bot-ul{
+  display: grid;
+  grid-template-columns: auto 2% auto;
+  margin-bottom: 50px;
+}
+.line{
+  height: 100%;
+  width: 2px;
+  background-color: var(--grey);
+}
+.ul-title{
+  font-size: 30px;
+}
+.left ul li,
+.right ul li{
+  list-style: disc;
+  list-style-position: inside;
+  font-size: 24px;
+  margin: 0;
+}
+/*end bot sec */
+
+.scrolldown{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  
+  transform: translateY(-80px) translateX(-50%) rotate(45deg);
+}
+.scrolldown span  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  animation: animate 1.5s linear infinite;
+  opacity: 0;
+}
+@keyframes animate {
+  0%
+  {
+    top: -5px;
+    left: -5px;
+    opacity: 0;
+  }
+  25%
+  {
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+  }
+  100%
+  {
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+  }
+
+
+}
+
+
+
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 1048px) {
+    label.logo{
+        font-size: 32px;
+        padding-left:60px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 17px;
+    }
+    
+}
+@media (max-width: 909px) {
+    header{
+        position: fixed;
+    }
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        
+        transition: all 400ms ease-in-out;
+    }
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 20px;
+        
+    }
+    nav a:active,
+    nav a:hover{
+        color: rgba(0, 0, 0, 0.363);
+    }
+    nav a:hover::before{
+        display: none;
+    }
+
+
+    nav ul.show{
+        left: 0;
+    }
+    label.logo{
+      font-size: 24px;
+      padding-left: 30px;
+      padding-left: 70px;
+    }
+
+}
+
+@media screen and (max-width: 850px) {
+  
+}
+
+@media screen and (max-width: 770px) {
+  /* top section */
+    .main-container{
+      width: 90%;
+    }
+    .about-container{
+      grid-template-columns: 35% auto;
+    }
+    .quote{
+      font-size: 18px;
+    }
+    .profile-container{
+      margin-bottom: 20px;
+    }
+    .profile-title{
+      font-size: 40px;
+    }
+    .profile-info{
+      font-size: 24px;
+    }
+    .profile-container ul li {
+      font-size: 20px;
+    }
+    
+
+    
+
+}
+
+@media screen and (max-width: 600px) {
+  .scrolldown{
+    display: none;
+  }
+   .about-container{
+     display: block;
+     margin-top: 12vh;
+  }
+  .profile{
+    margin-top: 20px;
+  }
+  /* sec section */
+  .top{
+    display: block;
+    margin-top: 20px;
+  }
+  #map{
+    display: none;
+  }
+  .bot-ul{
+    display: block;
+  }
+  .left{
+    margin-top: 10px;
+  }
+  .line{
+    width: 100%;
+    height: 2px;
+    margin: 15px 0;
+  }
+  .bot{
+    margin-bottom: 20px;
+  }
+
+}
+@media screen and (max-width: 400px) /* for iphone 6,7,8 lmao */{
+ .left ul li,
+ .right ul li{
+   font-size: 20px  ;
+ }
+}
+  

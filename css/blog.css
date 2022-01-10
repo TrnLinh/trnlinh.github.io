@@ -1,0 +1,287 @@
+:root {
+    --background: white;
+    --bg-color: white;
+    --gray: gray;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(255, 255, 255);
+}
+header{
+    background-color: white;
+    z-index: 999;
+    position:fixed;
+    width: 100%;
+    top: 0;
+}
+.nav-container{
+    margin: 0 auto;
+    width: 80%;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: white;
+}
+label.logo{
+    font-size: 35px;
+    
+    line-height: 80px;
+    font-weight: bold;
+}
+nav ul {
+    float: right;
+    margin-right: 40px;
+    
+}
+nav li{
+    display: inline-block;
+    margin: 0 25px;
+    line-height: 80px;
+    position: relative;
+    background-color: white;
+}
+nav a{
+    color: black;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #000;
+  
+    position: absolute;
+    top: 0;
+    width: 0%;
+  
+    transition: all ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    width: 100%;
+  }
+  nav #icon{
+      color: black;
+      font-size: 30px;
+      line-height: 80px;
+      float: left;
+      
+      cursor: pointer;
+      display: none;
+  }
+
+
+
+  .container{
+    margin: 0 auto;
+   width: 80%;
+}
+  /* style box for each blog */
+.blog-title{
+    font-size: 70px;
+    margin-bottom: 0;
+    margin-top: 10vh;
+  }
+  .blog-opener{
+     margin-top: 0;
+     font-size: 34px;
+  }
+  
+  /* style generall box */
+  .blog-content{
+      border: 2px solid black;
+      border-radius: 20px;
+      box-shadow: 20px 20px ;
+      margin-top: 100px;
+      
+  }
+  .blog-content-container{
+      margin: 0 auto;
+      width: 95%;
+  }
+  .blog-content-number{
+      font-size: 34px;
+      margin-bottom: 0;
+      margin-top: 20px;
+  }
+  .blog-content-title{
+      font-size: 40px;
+      margin-top: 10px;
+      margin-bottom: 0;
+      font-weight: bold;
+      
+  }
+  .blog-lenght{
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 0px;
+  }
+  .blog-lead{
+      font-size: 32px;
+      margin-top: 10px;
+  }
+  .toBlog-container{
+      text-align: right;
+      margin-bottom: 30px;
+  }
+  .toBlog{
+      color: black;
+      text-decoration: none;
+      font-size: 30px;
+      text-align: right;
+  }
+  .toBlog:hover{
+      text-decoration: underline;
+      color:var(--gray);
+  }
+  
+  .last-blog{
+      margin-bottom: 40vh;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 1048px) {
+    label.logo{
+        font-size: 32px;
+        padding-left:60px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 17px;
+    }
+    
+}
+@media (max-width: 909px) {
+    header{
+        position: fixed;
+    }
+    nav #icon{
+        display: block;
+    }
+    nav ul{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        
+        transition: all 400ms ease-in-out;
+    }
+    nav li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav a{
+        font-size: 20px;
+        
+    }
+    nav a:active,
+    nav a:hover{
+        color: rgba(0, 0, 0, 0.363);
+    }
+    nav a:hover::before{
+        display: none;
+    }
+
+
+    nav ul.show{
+        left: 0;
+    }
+    label.logo{
+      font-size: 24px;
+      padding-left: 30px;
+      padding-left: 70px;
+    }
+    .blog-title{
+        margin-top: 11vh;
+    }
+    .nav-container{
+        width: 80%;
+    }
+    
+    
+
+}
+
+@media screen and (max-width: 850px) {
+  
+  
+  
+}
+
+@media screen and (max-width: 770px) {
+    .blog-title{
+        font-size: 50px;
+        
+    }
+    .blog-opener{
+        font-size: 24px;
+    }
+    .blog-content{
+        margin-top: 50px;
+    }
+    .blog-content-number{
+        font-size: 25px;
+    }
+    .blog-content-title{
+        font-size: 30px;
+    }
+    .blog-lenght{
+        font-size: 18px;
+    }
+    .blog-lead{
+        font-size: 24px;
+    }
+    .last-blog{
+        margin-bottom: 30vh;
+    }
+    .toBlog{
+        font-size: 20px;
+    }
+      
+
+}
+
+@media screen and (max-width: 600px) {
+    .blog-opener{
+        font-size: 20px;
+    }
+    .blog-lead{
+        font-size: 20px;
+    }
+    .toBlog-container{
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 400px) /* for iphone 6,7,8 lmao */{
+
+    .blog-opener{
+        font-size: 18px;
+    }
+    .toBlog-container{
+        margin-top: 20px;
+    }
+    
+    
+}
