@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css\style.css">
-    <link rel="stylesheet" href="js/node_modules/sal.js/dist/sal.css">
-    <link rel="shortcut icon" href="img/outline_code_white_24dp.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="js/node_modules/sal.js/dist/sal.css" />
+    <link rel="shortcut icon" href="img/outline_code_white_24dp.png" />
     <script src="https://kit.fontawesome.com/e7365bc698.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <title>PersonalProb</title>
     <script>
-        $(document).ready(function(){
-            $('#icon').click(function(){
-                $('ul').toggleClass('show')
-            });
+      $(document).ready(function () {
+        $("#icon").click(function () {
+          $("ul").toggleClass("show");
         });
+      });
     </script>
-</head>
-<body>
-    <header>        
-        <div class="nav-container">
-            <nav>
-                
-                <label class="logo">PersonalProb</label>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="html/about.html">About</a></li>
-                    <li><a href="html/blog.html">Blog</a></li>
-                    <li><a href="html/contact.html">Contact</a></li>
-                </ul>
-                <label id="icon">
-                    <i class="fa fa-bars"></i>
-                </label>
-            </nav>
-        </div>
-    </header>  
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <nav>
+          <label class="logo">PersonalProb</label>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="html/about.html">About</a></li>
+            <li><a href="html/blog.html">Blog</a></li>
+            <li><a href="html/contact.html">Contact</a></li>
+          </ul>
+          <label id="icon">
+            <i class="fa fa-bars"></i>
+          </label>
+        </nav>
+      </div>
+    </header>
     <div class="container">
-        <section class="first">
-            <div class="introduce-container">
-                <p class="introduce">Hello, my name is Linh</p>
-                <p class="subtitle">Welcome to my website!</p>
-            </div>
-        </section>
-        <div class="scrolldown"> 
-        <span></span>
+      <section class="first">
+        <div class="introduce-container">
+          <p class="introduce">Hello, my name is Linh</p>
+          <p class="subtitle">Welcome to my website!</p>
         </div>
-        <section class="second">
-            <div class="container-about" 
-            data-sal-duration="1000"
-            data-sal="slide-up"
-            data-sal-delay="500"
-            data-sal-ease="ease-out-bounce"
-            >
-                <p>I'm a high school student currently studying in Vietnam.  I start to learn HTML, CSS and learn web development recently and right now you are looking at my first ever website using mostly HTML and CSS with some basic JavaScript. Hope you guys like it.</p>
-                <a href="html/about.html" class="aboutme">About Me</a>
-            </div>
-        </section>
+      </section>
+      <div class="scrolldown">
+        <span></span>
+      </div>
+      <section class="second">
+        <div
+          class="container-about"
+          data-sal-duration="1000"
+          data-sal="slide-up"
+          data-sal-delay="500"
+          data-sal-ease="ease-out-bounce"
+        >
+          <p>
+            I'm a high school student currently studying in Vietnam. I start to
+            learn HTML, CSS and learn web development recently and right now you
+            are looking at my first ever website using mostly HTML and CSS with
+            some basic JavaScript. Hope you guys like it.
+          </p>
+          <a href="html/about.html" class="aboutme">About Me</a>
+        </div>
+      </section>
     </div>
-
-    
-
-    
-
 
     <script src="js/node_modules/sal.js/dist/sal.js"></script>
     <script>
       sal();
-    </script> 
-</body>
+    </script>
+  </body>
 </html>
